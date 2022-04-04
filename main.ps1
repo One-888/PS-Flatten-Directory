@@ -11,7 +11,7 @@ function rename-files { param ([String] $Path)
 	ForEach-Object { `
 		$h = (hash-it $_.FullName) -replace "@{Hash=","" ; `
 		$h = ($h -replace "}","").ToString().Substring(0,6);`
-		$newname = $_.LastAccessTime.ToString("yyyyMMdd") +'_Costco_Receipt_' + $h + $_.Extension; ` 
+		$newname = $_.LastAccessTime.ToString("yyyyMMdd") +'_' + $h + $_.Extension; ` 
 		Rename-Item -Path $_.FullName -Newname $newname ; `
 		return ( "`n" + $h + " > " + $newname ); `` 
 
