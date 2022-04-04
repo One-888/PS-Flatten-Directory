@@ -11,5 +11,5 @@ Before:
 -\2002\Feb\*.MOV
 -\20XX\*.MOV
 
-After
+After:
 -\All Pictures\*.MOV
